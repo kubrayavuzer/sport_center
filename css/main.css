@@ -1,0 +1,11 @@
+
+
+@import './layouts/header.css';
+@import '.layouts/hero.css';
+@import '.layouts/static-section.css';
+@import '.layouts/info.css';
+@import '.layouts/BMI.css';
+@import '.layouts/trainers.css';
+@import '.layouts/purchase.css';
+@import '.layouts/review.css';
+@import '.layouts/contact.css';

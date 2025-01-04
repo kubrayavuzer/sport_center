@@ -1,0 +1,57 @@
+#BMI {
+    position: relative;
+    width: 100;
+    height: 50vh;
+    background-color: white
+    
+}
+
+
+#BMI .row{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 200px;
+    margin-top: 20px;
+    align-items: center;
+    padding: 0;
+}
+
+
+#BMI .col-lg-6 {
+    width: 50%;
+}
+#BMI .text{
+    max-width: 400px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: inherit;
+    font-size: 16px;
+}
+
+#BMI .col-lg-6 img{
+    width:80%;
+    height: auto;
+    
+
+}
+
+#BMI .col-lg-6 h2{
+    font-weight: 800;
+    color: darkblue;
+    margin-top: 20px;
+}
+
+#BMI .lead{
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 18px;
+}
+#BMI .col-lg-6 img{
+    width: 80%;
+    
+}
+#BMI .form{
+    margin-top: 30px;
+    
+}

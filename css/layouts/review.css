@@ -1,0 +1,88 @@
+#review-client {
+  position: relative;
+  width: 100;
+  height:60vh;  
+  padding: 60px 0;
+  background-color: #eaf4fc;
+}
+
+.orange-line {
+  width: 100px; /* Çizginin genişliği */
+  height: 10px;  /* Çizginin yüksekliği */
+  background-color: #FFA500;
+  margin: 0 auto; /* Çizgiyi konteyner içinde yatay olarak ortala */
+  border-radius: 30px;
+}
+
+#review-client .container{
+  width: 50%;
+  text-align: center;
+}
+
+#review-client .row{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+
+#review-client .review-card{
+  display: flex;
+}
+
+
+#review-client .text h2{
+    color: #0249ac;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#review-client .text p{
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+
+
+  /* Görseller */
+  .review-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #fff;
+  }
+  
+  /* Yorum Yazıları */
+  h5 {
+    font-size: 18px;
+    color: #00274d;
+    margin: 5px 0;
+  }
+  
+  .position {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    
+  }
+  
+  .review-text {
+    position: relative;
+    width: 400px;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: -10px;
+    position: relative;
+  } 
+

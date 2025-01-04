@@ -1,0 +1,36 @@
+#static-section{
+    background-color: #eaf4fc;
+    padding: 30px 0;
+
+}
+#static-section .container{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    width: 850px;
+}
+
+#static-section .box{
+    background-color: white;
+    border-color: white solid #ddd;
+    flex: 1;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    width: 5%;
+    height: 100px;
+}
+
+#static-section .box h2{
+    color: blue;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#static-section .box p{
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+}
