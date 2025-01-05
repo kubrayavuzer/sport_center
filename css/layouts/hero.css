@@ -1,6 +1,4 @@
 
-
-
 #hero {
     background: url(../../images/hero-man.jpg);
     position: relative; 
@@ -51,6 +49,16 @@
     line-height: 1.1;
     border-radius: 0.5;
   }
+  #hero .btn-primary-2 {
+    background-color: #3B5998 !important; 
+    color: white !important; 
+    border: none; 
+    font-size: 18px;
+    font-weight: 800;
+    padding-left: 50;
+    line-height: 1.1;
+    border-radius: 0.5;
+  }
   
   #hero .btn-outline-light{
     font-size: 18px;
@@ -66,14 +74,25 @@
     margin-bottom: 1rem;
   }
 
-  @media(max-width: 767.98px){
+  @media (max-width: 576px) {
     #hero {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-  }
-  #hero .content h1{
-    margin-top: 200px;
-  }
+      height: 700px;
+    }
+    #hero .content h1{
+      left: 0;
+    }
+    #hero .content{
+      left: 200px;
+    }
+    #hero .btn-primary{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    #hero .btn-outline-light{
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }

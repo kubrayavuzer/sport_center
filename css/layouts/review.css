@@ -4,6 +4,7 @@
   height:60vh;  
   padding: 60px 0;
   background-color: #eaf4fc;
+  overflow-x: hidden;
 }
 
 .orange-line {
@@ -86,3 +87,10 @@
     position: relative;
   } 
 
+
+  @media (max-width: 576px){
+    #review-client{
+      height: 750px;
+      text-align: center;
+    }
+  }

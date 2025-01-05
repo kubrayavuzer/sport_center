@@ -5,6 +5,7 @@
     height: 90vh;
     padding: 50px 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 #contact .container{
@@ -89,5 +90,30 @@ iframe {
   }
 
 
-
+  @media (max-width: 576px){
+    #contact{
+      height: 1100px;
+    }
+    #contact .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #contact .col-lg-7{
+      left: 0%;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    iframe{
+      text-align: center;
+      width: 450px;
+    }
+    #contact .container{
+      width: 100%;
+    }
+    #contact .contact-form input,
+    #contact  .contact-form textarea{
+      max-width: 450px;
+    }
+  }
 

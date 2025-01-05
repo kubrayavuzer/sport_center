@@ -1,6 +1,7 @@
 #static-section{
     background-color: #eaf4fc;
     padding: 30px 0;
+    overflow-x: hidden;
 
 }
 #static-section .container{
@@ -34,3 +35,14 @@
     font-weight: bold;
     margin-top: 5px;
 }
+
+@media (max-width: 576px){
+    #static-section .container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+    }
+    #static-section .box{
+        width: 300px;
+        
+    }

@@ -9,7 +9,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <!--navbar-->
     <header id="header" class="fixed-top">
       <div class="container">
@@ -50,7 +50,7 @@
     <section id="hero" class="hero">
       <div class="overlay"></div>
       <div class="content">
-        <h1 class="btn btn-primary">POWERFULL</h1>
+        <h1 class="btn btn-primary-2">POWERFULL</h1>
         <h2>
           Group <br />
           Practice <br />
@@ -91,7 +91,7 @@
         <div class="container">
           <h2>OUR CLASSES</h2>
           <div class="orange-line"></div>
-          <p>
+          <p class="prag" style="margin-top: 50px; ">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione ad
             non fuga. Lorem ipsum dolor sit, amet consectetur.
           </p>
@@ -105,31 +105,33 @@
               </button>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="info-sport">
-            <h2 id="featuresH2">Why are your Yoga?</h2>
-            <p id="featuresP" class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              suscipit, perferendis voluptatem iste dicta debitis neque vitae in
-              pariatur nostrum voluptatibus ratione nisi omnis earum deleniti.
-              Aspernatur optio totam distinctio.
-            </p>
-            <div class="section">
-              <h2>When comes Yoga Your Time.</h2>
-              <p class="lead">
-                Saturday - Sunday: 8:00am - 10:00am <br />Monday - Tuesday:
-                10:00am - 12:00pm <br />Wednesday - Friday: 3:00pm - 6:00pm
-              </p>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info-sport">
+                <h2 class="h2class" id="featuresH2">Why are your Yoga?</h2>
+                <p id="featuresP" class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                  suscipit, perferendis voluptatem iste dicta debitis neque vitae in
+                  pariatur nostrum voluptatibus ratione nisi omnis earum deleniti.
+                  Aspernatur optio totam distinctio.
+                </p>
+                <div class="section">
+                  <h2 class="h2class">When comes Yoga Your Time.</h2>
+                  <p class="lead">
+                    Saturday - Sunday: 8:00am - 10:00am <br />Monday - Tuesday:
+                    10:00am - 12:00pm <br />Wednesday - Friday: 3:00pm - 6:00pm
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="col-lg-4">
+              <div >
+                <img id="featuresImg" src="images/yoga.jpg" alt="" />
+              </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-          <div >
-            <img id="featuresImg" src="images/yoga.jpg" alt="" />
-          </div>
+        
+          
         </div>
       </div>
     </section>
@@ -167,22 +169,16 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 12px;
+                margin-top: 20px;
               "
             >
-              <p style="margin: 0 ">Your BMI</p>
+              <p style="margin-left: 50px; ">Your BMI</p>
               <div id="result"></div>
             </div>
-            <img src="images/bmi-index.jpg" alt="" class="img-fluid" />
+            <img style="margin-top: 0;" src="images/bmi-index.jpg" alt="" class="img-fluid" />
 
             <div
-              class="progress"
-              style="
-                height: 20px;
-                margin: 10px 0;
-                margin-left: 30px;
-                width: 360px;
-              "
-            >
+              class="progress">
               <div
                 id="bmi-progress"
                 class="progress-bar"

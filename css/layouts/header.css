@@ -6,6 +6,7 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 
@@ -52,22 +53,9 @@
 }
 
 
-@media(max-width: 767.98px){
-    #header{
-        background-color: transparent;
-        padding: 0;
-    }
-    #header .logo img{
-        width: 400px;
-        text-align: left;
-    }
+
+@media (max-width: 576px){
     #header .container{
-        width: 100%;
+        width: 500px;
     }
-
-
-    #navbar .navbar-toggler{
-        border: 0;
-    }
-    
 }

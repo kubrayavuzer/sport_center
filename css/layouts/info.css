@@ -1,15 +1,17 @@
 #info {
     position: relative;
     width: 100;
-    height: 110vh;
+    height: 100vh;
     background: linear-gradient(70deg, white 50%, rgb(235, 235, 235) 50%);
     padding: 100px 0;
+    overflow-x: hidden;
 }
 
 #info .container{
-    width: 50%;
     text-align: center;
 }
+
+
 
 .orange-line {
     width: 100px; /* Çizginin genişliği */
@@ -26,10 +28,16 @@
     line-height: 1.2;
 }
 #info .container p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
-    margin-top: 50px;
-    font-weight: 500;
+    font-weight: bolder;
+}
+#info .prag{
+    font-size: 16px;
+    color: #333;
+    font-weight: bolder;
+    width: 50%;
+    margin-left: 300px;
 }
 
 #info .button{
@@ -50,6 +58,7 @@
     text-decoration: none; 
 }
 
+
 #info .button .btn:hover {
     background-color: orangered; /* Daha koyu mavi */
 }
@@ -62,23 +71,25 @@
 
 #info .row{
     position: absolute;
-    display: grid;
+    display: flex;
     /* justify-content: space-between; */
     grid-template-columns: 1fr 1fr;
     /* right: 80px; */
     margin-top: 50px;
     align-items: center;
     gap: 20px;
+    margin: 0 150px;
 }
 
 
 #info .col-lg-5{
     width: 40%;
-    margin-left: 60px;
+    margin-left: 10%;
     font-size: inherit;
 }
 
-#info .col-lg-5 h2{
+#info .h2class{
+    text-align: left;
     font-size: 20px;
     font-weight: 800;
 }
@@ -90,12 +101,14 @@
     margin-top: 30px;
 }
 #info .text {
+    text-align: left;
     font-weight: 500;
     font-size: 16px;
     width: 400px;
 }
 
 #info .lead {
+    text-align: left;
     font-weight: 500;
     font-size: 16px;
     line-height: 2;
@@ -104,12 +117,48 @@
 }
 
 #info .col-lg-4 img{
-    width:200%;
+    width:300px;
     height: 100%;
 
 }
 
+@media (max-width: 576px){
+    #info{
+        height: 1200px;
+    }
+    #info .button{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #info .row{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    #info .col-lg-4 img{
+        width: 100%;
+        margin: 0 auto;
 
+    }
+    #info .container{
+        font-size: inherit;
+    }
+    #info .col-lg-5 p{
+        text-align: justify;
+    }
+    #info .col-lg-5{
+        left: -200px;
+    }
+    #info .col-lg-5{
+        width: 100%;
+    }
+    #info .prag{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
 
 
 
