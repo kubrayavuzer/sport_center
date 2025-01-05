@@ -2,7 +2,7 @@
     position: relative;
     width: 100;
     height: 110vh;
-    background-color: lightblue;
+    background: linear-gradient(70deg, white 50%, rgb(235, 235, 235) 50%);
     padding: 100px 0;
 }
 
@@ -26,7 +26,7 @@
     line-height: 1.2;
 }
 #info .container p {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     margin-top: 50px;
     font-weight: 500;
@@ -41,13 +41,13 @@
     background-color: #3B5998; 
     color: white;   
     padding: 10px 20px;   
-    margin: 5px;    
+    margin: 20px;    
     border: none;  
     border-radius: 5px;     
     display: inline-block;   
     text-align: center;       
     cursor: pointer;          
-    text-decoration: none;    
+    text-decoration: none; 
 }
 
 #info .button .btn:hover {
@@ -62,8 +62,9 @@
 
 #info .row{
     position: absolute;
+    display: grid;
+    /* justify-content: space-between; */
     grid-template-columns: 1fr 1fr;
-    left: 20%;
     /* right: 80px; */
     margin-top: 50px;
     align-items: center;
@@ -83,7 +84,7 @@
 }
 #info .col-lg-5 p{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bolder;
 }
 #info .section{
     margin-top: 30px;
@@ -103,9 +104,8 @@
 }
 
 #info .col-lg-4 img{
-    width:90%;
+    width:200%;
     height: 100%;
-    margin-top: -20px;
 
 }
 

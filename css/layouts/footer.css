@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.start{
+    text-align: left;
+}
+/* Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+ }
+/* Column */
+.col {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #3B5998;
+    color: #fff;
+    text-align: center;
+}
+
+/* Linkler */
+a {
+    color: #fff;
+    text-decoration: none;
+}

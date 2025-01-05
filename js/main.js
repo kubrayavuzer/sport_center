@@ -44,3 +44,59 @@ function calculateBMI() {
 
 height.addEventListener("input", calculateBMI);
 weight.addEventListener("input", calculateBMI);
+
+
+
+
+
+const featuresImg = document.querySelector("#featuresImg");
+const featuresH2 = document.querySelector("#featuresH2");
+const featuresP = document.querySelector("#featuresP");
+
+const featuresBtns = document.querySelector("#features-buttons");
+const featuresBtnYoga = document.querySelector("#yoga");
+const featuresBtnGroup = document.querySelector("#group");
+const featuresBtnSolo = document.querySelector("#solo");
+const featuresBtnStretching = document.querySelector("#stretching");
+
+
+function changeToYoga(){
+  featuresImg.src =  "./images/yoga.jpg";
+  featuresH2.textContent = "Yoga";
+}
+
+function changeToGroup(){
+  featuresImg.src =  "./images/group.webp";
+  featuresH2.textContent = "Group";
+}
+
+function changeToSolo(){
+  featuresImg.src =  "./images/solo.jpg";
+  featuresH2.textContent = "Solo";
+}
+
+function changeToStretching(){
+  featuresImg.src =  "./images/stret.webp";
+  featuresH2.textContent = "Stretching";
+}
+
+
+featuresBtns.addEventListener("click", function (event){
+  const id = event.target.id;
+  switch(id){
+    case "yoga":
+      changeToYoga();
+      break;
+    case "group":
+      changeToGroup();
+      break;
+    case "solo":
+      changeToSolo();
+       break;
+    case "stretching":
+      changeToStretching();
+      break;
+  }
+})
+
+
