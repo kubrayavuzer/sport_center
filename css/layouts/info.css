@@ -72,9 +72,7 @@
 #info .row{
     position: absolute;
     display: flex;
-    /* justify-content: space-between; */
     grid-template-columns: 1fr 1fr;
-    /* right: 80px; */
     margin-top: 50px;
     align-items: center;
     gap: 20px;
@@ -135,10 +133,13 @@
         flex-direction: column;
         margin: 0;
         width: 100%;
+        align-items: center;
+        padding: 0;
     }
     #info .col-lg-4 img{
-        width: 100%;
-        margin: 0 auto;
+        width: 450px;
+        padding: 0;
+        margin-right: 50px
 
     }
     #info .container{

@@ -1,51 +1,42 @@
-// there are 2 inputs height and weight, and what we want is when user fulfill the inputs, the BMI will be calculated and displayed
-
 let bmi = 0;
-
 const height = document.getElementById("height");
 const weight = document.getElementById("weight");
-
+const resultElement = document.getElementById("result");
+const indicator = document.getElementById("progress");
 function calculateBMI() {
-  bmi = weight.value / (height.value / 100) ** 2;
-
-  document.getElementById("result").innerHTML = bmi.toFixed(2);
-
-  // Add BMI category display and progress bar update
-  const bmiPercentage = document.getElementById("bmi-percentage");
-  const bmiProgress = document.getElementById("bmi-progress");
-
-  // Calculate progress percentage (considering 40 as max BMI for progress bar)
-  let progressPercentage = (bmi / 40) * 100;
-  progressPercentage = Math.min(100, progressPercentage); // Cap at 100%
-
-  bmiProgress.style.width = `${progressPercentage}%`;
-
-  if (bmi < 18.5) {
-    bmiPercentage.innerHTML = "Underweight";
-    bmiPercentage.style.color = "#2196f3";
-    bmiProgress.style.backgroundColor = "#2196f3";
-  } else if (bmi >= 18.5 && bmi < 25) {
-    bmiPercentage.innerHTML = "Normal Weight";
-    bmiPercentage.style.color = "#43a047";
-    bmiProgress.style.backgroundColor = "#43a047";
-  } else if (bmi >= 25 && bmi < 30) {
-    bmiPercentage.innerHTML = "Overweight";
-    bmiPercentage.style.color = "#fb8c00";
-    bmiProgress.style.backgroundColor = "#fb8c00";
-  } else if (bmi >= 30) {
-    bmiPercentage.innerHTML = "Obese";
-    bmiPercentage.style.color = "#c62828";
-    bmiProgress.style.backgroundColor = "#c62828";
-  } else {
-    bmiPercentage.innerHTML = "";
-    bmiProgress.style.width = "0%";
+  const heightValue = parseFloat(height.value);
+  const weightValue = parseFloat(weight.value);
+  // Doğrulama
+  if (isNaN(heightValue) || isNaN(weightValue) || heightValue <= 0 || weightValue <= 0) {
+    resultElement.innerHTML = "Invalid input!";
+    resultElement.style.color = "red";
+    indicator.style.left = "0%";
+    return;
   }
+  // BMI Hesaplama
+  const bmi = (weightValue / (heightValue / 100) ** 2).toFixed(2);
+  resultElement.innerHTML = `${bmi}`;
+  resultElement.style.color = "black";
+  // Progress Position
+  let indicatorPosition = "0%";
+  if (bmi < 18.5) {
+    indicatorPosition = "5%";
+  } else if (bmi >= 18.5 && bmi < 24.9) {
+    indicatorPosition = "15%";
+  } else if (bmi >= 25 && bmi < 29.9) {
+    indicatorPosition = "30%";
+  } else if (bmi >= 30 && bmi < 34.9) {
+    indicatorPosition = "45%";
+  } else if (bmi < 40) {
+    indicatorPosition = "65%";
+  }
+  
+  // İlerleme Gösterimi
+  indicator.style.left = indicatorPosition;
 }
-
+// Event Listeners
 height.addEventListener("input", calculateBMI);
 weight.addEventListener("input", calculateBMI);
-
-
 
 
 
@@ -98,6 +89,24 @@ featuresBtns.addEventListener("click", function (event){
       break;
   }
 })
+
+
+
+const header = document.querySelector(".fixed-top")
+window.addEventListener("scroll", scrollFunction)
+
+function scrollFunction (){
+  if(window.scrollY > 10){
+    header.style.backgroundColor = "#3B5998"
+  }else{
+    header.style.backgroundColor = "transparent"
+  }
+}
+
+
+
+
+
 
 
 

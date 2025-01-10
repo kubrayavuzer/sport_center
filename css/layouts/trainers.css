@@ -1,133 +1,158 @@
 #trainers{
-    position: relative;
-    background-color: #eaf4fc;
-    width: 100;
-    height: 60vh;
-    padding: 50px 0;
-    overflow-x: hidden;     
+   max-width: 100%;
+   height: 110vh;
 }
-
-#trainers .container{
+.text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 70px;
     text-align: center;
-    width: 50%;
-}
-
-#trainers .container h2{
-    text-align: center;
-    font-weight: bold;
-    color: darkblue;
-
-}
-
-.orange-line {
-    width: 100px; /* Çizginin genişliği */
-    height: 10px;  /* Çizginin yüksekliği */
-    background-color: #FFA500;
-    margin: 0 auto; /* Çizgiyi konteyner içinde yatay olarak ortala */
-    border-radius: 30px;
-  }
-
-#trainers .container p{
-    left: 20%;
-    margin-top: 60px;
-    font-weight: 500;
-}
-
-#trainers .row{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-
-#trainers .col-lg-3{
-    position: relative;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-}
-
-#trainers .image{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border: 1px solid orangered;
-    border-radius: 5%;
-    
-    
-}
-
-
-
-#trainers .name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:darkblue; /* Arka planın yarı saydam siyah olması */
-    color: #fff; /* Yazı rengi */
-    font-size: 1.2rem; /* Yazı boyutu */
-    font-weight: bold;
+    color: #355592;
+    padding-top: 50px;
     padding: 10px;
+  }
+  .text p {
     text-align: center;
-    opacity: 0; /* Varsayılan olarak gizli */
-    transform: translateY(100%); /* Başlangıçta kartın altına yerleştirilir */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Animasyonlar */
-}
-#trainers .col-lg-3:hover .image {
-    transform: scale(1.1);
-     /* Hover sırasında resmi büyütme */
-     clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    color: #333333;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  #trainers .container {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px 10px;
+    background-color: rgb(237, 243, 250);
+    
     
   }
-  
-  #trainers .col-lg-3:hover .name {
-    opacity: 1; /* İsim görünür */
-    transform: translateY(0); /* Kartın altından yukarı çıkar */
-    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-    
-  }
-
-
-
-/* #trainers .image{
-    width: 200px;
-    height: 200px;
+  #trainers .images {
+    display: flex;
     position: relative;
-}
-
-#trainers .name{
+    justify-content: center;
+    margin-top: 30px;
+    gap: 40px;
+  }
+  #trainers .img-container {
+    position: relative;
+    display: inline-block;
+    /* Hover olduğunda çizgilerin tam çerçeve oluşturması */
+    &:hover {
+      .outer-frame {
+        &::after {
+          width: 80%;
+          left: 24px;
+          right: 24px;
+        }
+      }
+      .outer-frame .side.left {
+        height: 50%;
+        bottom: 16px;
+      }
+      .outer-frame .side.right {
+        height: 50%;
+        bottom: 16px;
+      }
+      .img-content {
+        bottom: 16px;
+        opacity: 1;
+      }
+    }
+  }
+  .img-container img {
+    width: 300px;
+    height: 350px;
+    border: 2px solid #F39F15;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  .outer-frame {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100%; /* Kartın genişliği resmin genişliğinin %100'ü olacak şekilde ayarlandı */
-    /* height: 30%; /* Kartın yüksekliği resmin yüksekliğinin %30'u olacak şekilde ayarlandı */
-    /* background-color: blue;
-    color: white;
-    font-family: Arial;
+    width: 300px;
+    height: 350px;
+    border: none;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #355592;
+      transition: all 0.5s ease;
+    }
+  }
+  /* Üst çizgi */
+  .outer-frame::before {
+    width: 80px;
+    height: 8px;
+    top: -8px;
+    left: calc(50% - 40px);
+  }
+  /* Alt çizgi*/
+  .outer-frame::after {
+    width: 80px;
+    height: 8px;
+    bottom: -8px;
+    left: calc(50% - 40px);
+  }
+  /*sol ve sağ çizgiler için side ile konum ve renk tanımlaması*/
+  .outer-frame .side {
+    position: absolute;
+    background-color: #355592;
+    transition: all 0.5s ease;
+  }
+  /* Sol ve sağ çizgi */
+  .outer-frame .side.left {
+    width: 8px;
+    height: 120px;
+    left: -8px;
+    top: calc(50% - 60px);
+  }
+  .outer-frame .side.right {
+    width: 8px;
+    height: 120px;
+    right: -8px;
+    top: calc(50% - 60px);
+  }
+  .img-content {
+    color: #E5E7EB;
+    position: absolute;
+    left: 16px;
+    width: 268px;
+    bottom: 0;
+    padding: 24px 8px;
     text-align: center;
-    opacity: 0; /* Başlangıçta görünmez */
-    /* transition: opacity 0.3s ease-in-out;
-} */ 
-/* 
-
-#trainers .image:hover + .name {
-  
-    opacity: 1;
-  }  */
-
-
-
+    background-color: #355592;
+    clip-path: polygon(
+      0% 15%,
+      15% 15%,
+      15% 0%,
+      85% 0%,
+      85% 15%,
+      100% 15%,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      15% 100%,
+      15% 85%,
+      0% 85%
+    );
+    opacity: 0;
+    transition: all 250ms linear;
+  }
+  .img-content p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
   @media (max-width: 576px){
-    #trainers .row{
+    #trainers .images{
         flex-direction: column;
         align-items: center;
     }
     #trainers{
-        height: 1000px;
+        height: 1500px;
     }
   }
