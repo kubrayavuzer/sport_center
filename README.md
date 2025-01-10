@@ -50,10 +50,4 @@ JavaScript: Dinamik işlevler ve hesaplama.
 🔐 **Canlı Linki**
 
 https://incredible-tapioca-39a39f.netlify.app/
-
-🛠️ Daha fazla bilgi için geliştirici belgelerine veya destek ekibine ulaşın.
-
-
-
-
-https://incredible-tapioca-39a39f.netlify.app/
+Daha fazla bilgi için: kubrayavuzeer@gmail.com
